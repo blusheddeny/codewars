@@ -1,14 +1,14 @@
-function pigInt(str){
-   const arr = Array.from(str.split(' '))
-   console.log(arr)
-   arr.map((e) => {
-    let move = Array.from(e)
-    let end = move[0] + 'ay'
-    console.log(end)
-    move.shift()
-    move.push(end)
-    return move.join('')
-   })
+function pigIt(str){
+     var res = Array.from(str.split(' ')).map((e) => {
+      var move = Array.from(e)
+      if(e != '!' && e != '?'){
+      var end = move[0] + "ay"
+      move.shift()
+      move.push(end)
+      }
+      return move.join('')
     
+
+  })
+  return res.join(' ')
 }
-pigInt('maybe you are the problem')
